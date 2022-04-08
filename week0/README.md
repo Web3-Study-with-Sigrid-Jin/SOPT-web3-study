@@ -31,7 +31,7 @@
   * [거래소에서 메타마스크로 코인 송금하는 방법](https://www.steemcoinpan.com/hive-101145/@donekim/38qazr)
   * [NFT 101 메타마스크에서 입출금 해보기](https://m.post.naver.com/viewer/postView.naver?volumeNo=33335828&memberNo=15388801)
 
-  #### Q5. 이더리움은 무엇인가요? 스마트 컨트랙트는 무엇인가요? 요것도 한번 아무것도 모르는 사람에게 설명한다고 생각하고, 설명해주세요!**
+  #### Q5. 이더리움은 무엇인가요? 스마트 컨트랙트는 무엇인가요? 요것도 한번 아무것도 모르는 사람에게 설명한다고 생각하고, 설명해주세요!
 
   * [이더리움이란 무엇인가?](https://www.youtube.com/watch?v=TApXOy7Phjo)
   * [스마트 컨트랙트란 무엇인가요?](https://www.youtube.com/watch?v=_5Rh9FePaYk)
