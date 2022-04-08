@@ -39,6 +39,7 @@
   #### Q6. 본인이 생각했을 때 가장 흥미로운 Web3 서비스를 살펴보고, 흥미가 가는 이유에 대해 설명해주세요!
 
   * NFT, DAO, Metaverse... [링크](https://jiyu0719.medium.com/blockchain-crypto-nft-web3-dao-%EC%9D%B4%EA%B2%8C-%EB%8B%A4-%EB%AD%90%EC%95%BC-%EB%B0%94%EB%B0%94%ED%98%84%EC%82%AC-%EC%95%8C-%EA%B2%83%EB%A7%8C-%EC%95%8C%EC%9E%90%EA%B5%AC%EC%9A%94-af1d9493dd30)
+  * [이미지로 이해하는 바바현사](https://jiyu0719.medium.com/blockchain-crypto-nft-web3-dao-%EB%B0%94%EB%B0%94%ED%98%84%EC%82%AC-%EC%95%8C-%EA%B2%83%EB%A7%8C-%EC%95%8C%EC%9E%90%EA%B5%AC%EC%9A%94-%EC%9D%B4%EB%AF%B8%EC%A7%80%ED%8E%B8-bbd00ba5d506)
 
 ## 과제 제출하기 전에!
 
