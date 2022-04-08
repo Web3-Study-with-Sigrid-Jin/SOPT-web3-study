@@ -25,6 +25,15 @@
   * [코인 출금 전에 알아야 할 필수 기초 상식](https://dcrypto.tistory.com/902)
   * [거래소에서 메타마스크로 코인 송금하는 방법](https://www.steemcoinpan.com/hive-101145/@donekim/38qazr)
   * [NFT 101 메타마스크에서 입출금 해보기](https://m.post.naver.com/viewer/postView.naver?volumeNo=33335828&memberNo=15388801)
-* **#5. 이더리움은 무엇인가요? 요것도 한번 아무것도 모르는 사람에게 설명한다고 생각하고, 설명해주세요!**
+* **#5. 이더리움은 무엇인가요? 스마트 컨트랙트는 무엇인가요? 요것도 한번 아무것도 모르는 사람에게 설명한다고 생각하고, 설명해주세요!**
+  * [이더리움이란 무엇인가?](https://www.youtube.com/watch?v=TApXOy7Phjo)
+  * [스마트 컨트랙트란 무엇인가요?](https://www.youtube.com/watch?v=_5Rh9FePaYk)
 * **#6. 본인이 생각했을 때 가장 흥미로운 Web3 서비스를 살펴보고, 흥미가 가는 이유에 대해 설명해주세요!**
 
+## 과제 제출하기 전에!
+
+* 자신의 깃헙 아이디로 브랜치를 만든 후, Markdown 파일로 답변을 작성한 후 week1 폴더에 저장해주세요.
+  * 파일 이름은 ```week1_본인아이디.md``` 로 부탁드립니다!
+
+* 금요일 반은 4월 15일(금) 00:00까지 작성 후, main 브랜치로 Pull Request를 보내주세요.
+* 토요일 반은 4월 16일(토) 00:00까지 작성 후, main 브랜치로 Pull Request를 보내주세요.
