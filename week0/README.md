@@ -9,12 +9,12 @@
 ## 요구 사항
 
 * 다음의 질문을 본인만의 답변으로 작성해서, Pull Request로 보내주세요!
-* **#1. '블록체인 기술'에 대해서 자기만의 언어로 설명해보고, Web2와 Web3는 어떤 차이가 있는 지 설명해주세요!**
+* '블록체인 기술'에 대해서 자기만의 언어로 설명해보고, Web2와 Web3는 어떤 차이가 있는 지 설명해주세요!**
 * **#2. 이 영상을 보고 '토큰 경제'는 어떤 변화를 불러일으킬지, 어떤 효용이 있을지? 에 대해서 자신의 생각을 이야기해주세요!**
   * [암호화폐, 돈의 판도가 바뀐다 / 강연 풀버전#미래수업 | Living the New Normal EP.15 | tvN 210222 방송](https://www.youtube.com/watch?v=U_M6TISpQoI)
   * [김단테님 Web3 관련 영상 (1)](https://youtu.be/PqoSu6fLZLQ) - 메타버스/NFT 보다 더 큰게 온다
   * [김단테님 Web3 관련 영상 (2)](https://www.youtube.com/watch?v=uzsFn1mu590&ab_channel=증시각도기TV) - 논란의 웹 3.0, 새로운 혁명이 일어날 수 있을까
-  * [웹3, 대체 뭐길래?](https://medium.com/angel-league/웹3-크립토-왜-신경쓰는거야-21cee3d5bf25) (미국유명 벤처캐피탈인 USV에서 작성, 유명블로거/투자자인 fred wilson도 USV소속, [영어 원문 글 링크](https://continuations.com/post/671863718643105792/web3crypto-why-bother))
+  * [누구나 말하지만 대부분 모르는 Web3](https://stibee.com/api/v1.0/emails/share/6yko69BtFOqxIrqURYarnkHI97slYQ==) (국문, 뉴스레터 코넛의 아티클)
   * “[NFT, 웹3, 메타버스에 대한 생각](https://charlespyo.com/2021/12/29/nft-웹3-메타버스에-대한-생각/)”
   * 생각해볼 지점: 토큰 경제가 뭐야? 어떤 효용이 있을까? 어떤 문제가 있을까?
 * \#**3. 만약 크립토에 대해 아무것도 모르는 중학교 3학년 친척 동생/조카가, "그래서 비트코인은 뭐예요? 비트코인은 왜 만들어졌어요?"라고 물어본다고 할 때, 어떻게 설명해주시겠어요?**
