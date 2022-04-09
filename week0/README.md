@@ -10,6 +10,8 @@
 
 * 다음의 질문을 구글링 또는 아래 자료를 통해 학습한 후 본인만의 답변으로 작성해서, Pull Request로 보내주세요!
 
+* 작성 분량은 제한이 없습니다. 모든 답변에 대답하실 필요도 없습니다. 본인이 찾아본 만큼, 작성한 만큼만 작성해주세요.
+
   #### Q1. '블록체인 기술'에 대해서 자기만의 언어로 설명해보고, Web2와 Web3는 어떤 차이가 있는 지 설명해주세요!
 
   * [노마드 코더 설명 영상](https://www.youtube.com/watch?v=Ca7Meu4z-F4&vl=ko)
@@ -49,6 +51,7 @@
   * [블록체인 개발자가 은행을 대체할 수 있을까 - 노마드 코더](https://www.youtube.com/watch?v=3I5_D-deQT0&list=PL7jH19IHhOLOJfXeVqjtiawzNQLxOgTdq&index=4)
   * [고양이 짤방이 7억? NFT 만드는 방법 설명해드림 - 노마드 코더](https://www.youtube.com/watch?v=3K6uDWa2aRw&list=PL7jH19IHhOLOJfXeVqjtiawzNQLxOgTdq&index=5)
   * [금융의 미래 디파이를 알아야 하는 이유 - 노마드 코더](https://www.youtube.com/watch?v=vRUn0DB_4PU&list=PL7jH19IHhOLOJfXeVqjtiawzNQLxOgTdq&index=7)
+  * [기업의 미래, DAO란 무엇일까?](https://www.youtube.com/watch?v=GNIH44WC-ao)
 
 ## 과제 제출하기 전에!
 
