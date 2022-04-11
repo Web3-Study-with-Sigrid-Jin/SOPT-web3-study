@@ -32,16 +32,6 @@
             return ERC20interface.balanceOf(msg.sender);
         }
         
-        function approveSpendToken(uint _amount) public returns(bool){
-            // emit Approval(msg.sender, address(this), _amount);
-            return ERC20interface.approve(address(this), _amount); // We give permission to this contract to spend the sender tokens
-        }
-        
-        // function allowance() public view returns (uint){
-        //     return ERC20interface.allowance(msg.sender, address(this));
-        // }
-        
-        
         function depositISHTokens (address _to, uint256 _amount) external payable {
             console.log("HEY", _to, _amount);
             ERC20interface.transferFrom(msg.sender, _to, _amount);
