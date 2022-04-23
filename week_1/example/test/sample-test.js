@@ -2,24 +2,45 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("Greeter", function () {
-  it("Should transfer tokens", async function () {
-    const StoreToken = await ethers.getContractFactory("StoreToken");
-    const contract = await StoreToken.attach("0xc494f3b672060607a865cf737732bc5048fd8670");
-    await contract.approveSpendToken(10);
+  // it("Should return the new greeting once it's changed", async function () {
+  //   const Greeter = await ethers.getContractFactory("Greeter");
+  //   const greeter = await Greeter.deploy("Hello, world!");
+  //   await greeter.deployed();
 
-    await contract.depositISHTokens("0x01725BE700413D34bCC5e961de1d0C777d3A52F4", 5);
+  //   expect(await greeter.greet()).to.equal("Hello, world!");
 
+  //   const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
 
-    // // const greeter = await Greeter.deploy("Hello, world!");
-    // // await greeter.deployed();
+  //   // wait until the transaction is mined
+  //   await setGreetingTx.wait();
 
-    // expect(await greeter.greet()).to.equal("Hello, world!");
+  //   expect(await greeter.greet()).to.equal("Hola, mundo!");
+  // });
 
-    // const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
+  it("Counter Example", async function () {
+    const [owner, addr1, addr2] = await ethers.getSigners();
+    const CounterFactory = await ethers.getContractFactory("Counter");
+    const counterImpl = await CounterFactory.deploy(5);
+    await counterImpl.deployed();
 
-    // // wait until the transaction is mined
-    // await setGreetingTx.wait();
+    expect(await counterImpl.owner()).to.equal(owner.address);
 
-    // expect(await greeter.greet()).to.equal("Hola, mundo!");
+    // get
+    expect(await counterImpl.current()).to.equal(5);
+
+    // reset
+    await counterImpl.reset()
+    expect(await counterImpl.current()).to.equal(0);
+
+    // increment
+    await counterImpl.increment()
+    expect(await counterImpl.current()).to.equal(1);
+
+    // decrement
+    await counterImpl.decrement()
+    expect(await counterImpl.current()).to.equal(0);
+
+    // increment not by owner
+    await counterImpl.connect(addr1).increment(); // failed
   });
 });
