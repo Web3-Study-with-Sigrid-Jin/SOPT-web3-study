@@ -8,7 +8,7 @@
 
 ![image 2](https://user-images.githubusercontent.com/29723695/164980854-f710a747-6dc1-4fe5-b51a-2bbc6c0f170e.png)
 
-getCounter를 통한 값 반환
+getCount를 통한 값 반환
 
 ![image 3](https://user-images.githubusercontent.com/29723695/164980852-b5ce4a64-bb6f-45bc-9363-a9c9acfa8776.png)
 
