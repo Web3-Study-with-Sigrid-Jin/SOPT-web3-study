@@ -51,6 +51,8 @@
 
 * [What is a crypto bridge?](https://www.youtube.com/watch?v=nT26cIz8HjI)
 * [바이낸스 브릿지 설명](https://academy.binance.com/ko/articles/an-introduction-to-binance-bridge)
+* [오르빗 브리지](https://bridge.orbitchain.io/)
+* [오르빗 브리지 문서](https://bridge-docs.orbitchain.io/faq/general-kr)
 
 -----
 
