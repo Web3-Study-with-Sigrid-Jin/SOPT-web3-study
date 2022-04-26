@@ -8,6 +8,8 @@
 
 잠깐! 그런데! 이 과제를 수행하기 전에 아래의 사항에 대해 공부해 봅시다.
 
+지인에게 토큰을 사용하도록 하는 과제는 다음 주에 진행할 예정입니다.
+
 ### ERC20 토큰과 메인넷 코인은 무슨 차이인가요?
 
 **배경**
@@ -105,3 +107,17 @@ Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer
 3. ERC20 토큰을 활용해서 Mainnet 코인으로 Bridge로 바꿔보세요. 또는, Mainnet 코인을 ERC20 토큰으로 Bridge를 통해 바꿔보세요. 그리고 느낀 점을 알려주세요.
 
    주의! Bridge를 이용하는 메인넷 네트워크의 기축통화 코인 (예: ETH) 를 수수료로 지불해야 하기 때문에, Bridge 컨트랙트가 올라와 있는 메인넷 기축 코인이 있어야 합니다.
+
+### 트레블 룰
+
+![______________________2.png](https://upbitcs.zendesk.com/hc/article_attachments/5028853196569/______________________2.png)
+
+트래블룰이란 가상자산사업자(VASP)가 100만원 이상의 거래가 발생할 때 송신인과 수신인의 신원 정보를 파악해 금융당국에 보고해야 하는 법적인 의무입니다. 트레블 룰 규제가 적용된 현 상황에서, 암호화폐를 거래하고 송금하는 것이 어려워 졌습니다.
+
+아래 [링크](https://www.coindeskkorea.com/news/articleView.html?idxno=78412) , [업비트 안내](https://upbitcs.zendesk.com/hc/ko/articles/4498679629337-%ED%8A%B8%EB%9E%98%EB%B8%94%EB%A3%B0-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0) 를 참고해서, 다음을 수행해주세요.
+
+1. 본인이 사용하는 거래소로 원화를 보내서 Ethereum을 구매하고 메타마스크 지갑으로 ETH를 보내세요.
+2. 그리고, Uniswap에서 MATIC을 ETH로 스왑하세요.
+3. 마지막으로, MATIC을 Polygon Mainnet으로 보내주세요.
+
+구체적인 내용은 본인이 사용하는 중앙화 거래소의 구체적인 공지 게시글을 참조해서 진행해주세요.
