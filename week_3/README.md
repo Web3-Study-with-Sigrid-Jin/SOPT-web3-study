@@ -10,9 +10,11 @@
 
 지인에게 토큰을 사용하도록 하는 과제는 다음 주에 진행할 예정입니다.
 
-### 과제 1. ERC20 토큰과 메인넷 코인은 무슨 차이인가요?
+----
 
-#### 배경
+## 과제 1. ERC20 토큰과 메인넷 코인은 무슨 차이인가요?
+
+### 배경
 
 <img src="https://blog.kakaocdn.net/dn/KxCor/btqDxvBSkQb/eq39XN9USpJNgV5g6BRJIK/img.jpg" alt="img=250x" style="zoom:60%;" />
 
@@ -23,15 +25,17 @@
 
 이더리움은 메인 체인의 기축통화인 코인입니다. 그런데, 폴리곤도 메인 체인의 기축통화인 코인입니다. 그런데 거래소에서 구매할 수 있는 MATIC 은 ERC20의 '토큰' 입니다. 즉, 이더리움 상에 올라와 있는 토큰이라는 뜻입니다.
 
-#### 과제 1 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
+### 과제 1 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
 
 1. 왜 거래소는 메인넷 체인의 MATIC을 상장하지 않고, ERC20 규격의 MATIC을 상장했을까요?
 
 2. 검색을 통해 `ERC20 메인넷 차이` , `Mainnet MATIC vs ERC20 MATIC` 를 살펴보고, 무슨 차이가 있는지 정리해주세요.
 
-### 과제 2. ERC20 토큰을 메인넷 코인로 전환하는 Bridge
+------
 
-#### 배경
+## 과제 2. ERC20 토큰을 메인넷 코인로 전환하는 Bridge
+
+### 배경
 
 우리는 거래소에 상장된 MATIC 이 Polygon 메인 블록체인에서 사용할 수 있는 코인이 아니고, Ethereum 네트워크 상에서 ERC20의 규격으로, 스마트 컨트랙트에서 장부거래 관리되고 있는 토큰이라는 사실을 알았습니다.
 
@@ -39,20 +43,24 @@
 
 예를 들어, 카카오 클레이튼의 Klay 코인을 이더리움 네트워크 위의 탈중앙화 거래소 (Uniswap 등)에서 거래하기 위해서는 이더리움 네트워크 상에 ERC20에 클레이튼 '토큰' 을 활용해야 합니다. 이더리움 네트워크 위의 Uniswap을 통해 구매한 Klay 토큰을 카카오 클레이튼 네트워크의 Klay 코인으로 바꾸기 위해서는 Bridge를 사용해야 합니다.
 
-#### 과제 2 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
+### 과제 2 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
 
 아래 링크를 통해 학습한 내용을 바탕으로, Bridge가 무엇인지 본인의 언어를 활용하여 설명해주세요.
 
-**학습할 자료**
+### 학습할 자료
 
 * [What is a crypto bridge?](https://www.youtube.com/watch?v=nT26cIz8HjI)
 * [바이낸스 브릿지 설명](https://academy.binance.com/ko/articles/an-introduction-to-binance-bridge)
 
-### 과제 3. Layer 2
+-----
 
-#### 배경
+## 과제 3. Layer 2
 
-Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer 1 이라고 하고, Polygon은 Layer 2 라고 합니다. 아래 [기사](https://www.mk.co.kr/economy/view.php?sc=50000001&year=2022&no=102392)를 읽어보세요.
+### 배경
+
+Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer 1 이라고 하고, Polygon은 Layer 2 라고 합니다.
+
+### 아래 [기사](https://www.mk.co.kr/economy/view.php?sc=50000001&year=2022&no=102392)를 읽어보세요.
 
 ![img](https://file.mk.co.kr/meet/neds/2022/02/image_readtop_2022_102392_16444105114937024.jpg)
 
@@ -68,7 +76,7 @@ Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer
 >
 > 고민 끝에 등장한 솔루션이 바로 ‘레이어2(Layer2)’ 플랫폼이다. 이더리움의 장점인 대중성은 그대로 살리면서 한계로 지목돼온 느린 속도와 비싼 수수료 문제도 해결할 수 있는 솔루션이다. 차세대 플랫폼으로 각광받는 레이어2 플랫폼, 이른바 ‘L2 코인’에 대해 살펴본다.
 
-#### 과제 3 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
+### 과제 3 요구 사항: 아래의 질문에 답을 내려주세요. 분량의 제한은 없습니다.
 
 1. Layer 1과 Layer 2는 어떤 차이인지 본인만의 언어로 정리해주세요.
 
@@ -78,15 +86,17 @@ Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer
 
    주의! Bridge를 이용하는 메인넷 네트워크의 기축통화 코인 (예: ETH) 를 수수료로 지불해야 하기 때문에, Bridge 컨트랙트가 올라와 있는 메인넷 기축 코인이 있어야 합니다.
 
-### 과제 4. 트레블 룰
+-----
+
+## 과제 4. 트레블 룰
 
 ![______________________2.png](https://upbitcs.zendesk.com/hc/article_attachments/5028853196569/______________________2.png)
 
-#### 배경
+### 배경
 
 트래블 룰이란 가상자산사업자(VASP)가 100만원 이상의 거래가 발생할 때 송신인과 수신인의 신원 정보를 파악해 금융당국에 보고해야 하는 법적인 의무입니다. 트레블 룰 규제가 적용된 현 상황에서, 암호화폐를 거래하고 송금하는 데 추가 단계와 시간이 필요로 하게 되었습니다.
 
-#### 과제 4 요구사항: MATIC (ERC20 토큰) 을 구매하고, 이를 활용해 Polygon Mainnet의 MATIC (Mainnet) 으로 전환하세요.
+### 과제 4 요구사항: MATIC (ERC20 토큰) 을 구매하고, 이를 활용해 Polygon Mainnet의 MATIC (Mainnet) 으로 전환하세요.
 
 아래 [링크](https://www.coindeskkorea.com/news/articleView.html?idxno=78412) , [업비트 안내](https://upbitcs.zendesk.com/hc/ko/articles/4498679629337-%ED%8A%B8%EB%9E%98%EB%B8%94%EB%A3%B0-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0) 를 참고해서, 다음을 수행해주세요.
 
@@ -95,3 +105,5 @@ Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer
 3. 마지막으로, MATIC을 Polygon Mainnet으로 보내주세요. 이 때, [Umbria Network](https://bridge.umbria.network/) 를 사용하세요.
 
 구체적인 내용은 본인이 사용하는 중앙화 거래소의 구체적인 공지 게시글을 참조해서 진행해주세요.
+
+본인의 돈을 다루는 내용이기 때문에, 궁금하거나 걱정되는 사항이 있으면 언제든지 저에게 알려주세요.
