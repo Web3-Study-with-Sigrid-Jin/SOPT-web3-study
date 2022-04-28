@@ -104,8 +104,8 @@ Ethereum Mainnet과 Polygon Mainnet은 어떤 관계일까요? Ethereum은 Layer
 
 아래 [링크](https://www.coindeskkorea.com/news/articleView.html?idxno=78412) , [업비트 안내](https://upbitcs.zendesk.com/hc/ko/articles/4498679629337-%ED%8A%B8%EB%9E%98%EB%B8%94%EB%A3%B0-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0) 를 참고해서, 다음을 수행해주세요.
 
-1. 본인이 사용하는 거래소로 원화를 보내서 Ethereum을 구매하고 메타마스크 지갑으로 ETH를 보내세요.
-2. 그리고, Uniswap에서 MATIC을 ETH로 스왑하세요.
+1. 본인이 사용하는 거래소로 원화를 보내서 Ethereum을 구매하고 메타마스크 지갑으로 ETH를 보내세요. (현재 거래소에서 원화를 입금했으면 암호화폐 출금이 24시간 필요하기 때문에.. 미리 해두셔야)
+2. 그리고, Uniswap에서 ETH를 MATIC으로 스왑하세요.
 3. 마지막으로, MATIC을 Polygon Mainnet으로 보내주세요. 이 때, [Umbria Network](https://bridge.umbria.network/) 를 사용하세요.
    * [Umbria Network 사용법 설명](https://www.youtube.com/watch?v=445PZnORsxo)
 
