@@ -83,7 +83,7 @@
 
 ## 과제 제출하기 전에!
 
-* 레포지토리를 Fork해주세요. Markdown 파일로 답변을 작성한 후 week1 폴더에 저장해서 Pull Request를 보내주세요.
+* 레포지토리를 Fork해주세요. Markdown 파일로 답변을 작성한 후 week2 폴더에 저장해서 Pull Request를 보내주세요.
   * 파일 이름은 ```week2_본인아이디.md``` 로 부탁드립니다!
 
 * 금요일 반은 4월 22일(금) 00:00까지 작성 후, main 브랜치로 Pull Request를 보내주세요.
