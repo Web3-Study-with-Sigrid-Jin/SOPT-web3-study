@@ -18,20 +18,24 @@
 
 1. 왜 거래소는 메인넷 체인의 MATIC을 상장하지 않고, ERC20 규격의 MATIC을 상장했을까요?
 
-   Upbit 는 Ethereum 체인 '만' 선택 가능함
+   - Upbit 는 Ethereum 체인 '만' 선택 가능함
+   
    <img width="371" alt="image" src="https://user-images.githubusercontent.com/90569731/166416459-8de11a84-a7db-403b-9da0-b8f2de315eb4.png">
    
    [업비트 - [안내] 폴리곤(MATIC) 오입금에 대한 안내](https://upbit.com/service_center/notice?id=2223)
    
    [Beeblock - 5/4 국내 최초 폴리곤 메인넷 지원하는 거래소 라고 합니다. ](https://beeblock.co.kr/support/news/BN_BN/content/IOSSKIP_220503_1)
 
-   Binance 는 Polygon 체인 선택이 가능함
+   - Binance 는 Polygon 체인 선택이 가능함
+   
    <img width="481" alt="image" src="https://user-images.githubusercontent.com/90569731/166416890-5b40a05f-9d1f-43de-b924-f4d18186532a.png">
    
    ```
    (https://www.asiatoday.co.kr/view.php?key=20211019010010313)
 
-   업비트 관계자는 19일 “현재 폴리곤 메인넷으로 이전된 MATIC이 이더리움보다 현저히 적어 메인넷으로 지원할 경우 이용자들이 입금하고자 하는 수량을 적시에 충분히 지원하기 어려울 수 있다”며 “일대일 소각·발행 기능이 적용되지 않는 이더리움 기반 ERC20 네트워크로 초기 지원한 것”이라고 주장했다.
+   업비트 관계자는 19일 “현재 폴리곤 메인넷으로 이전된 MATIC이 이더리움보다 현저히 적어 메인넷으로 지원할 경우
+   이용자들이 입금하고자 하는 수량을 적시에 충분히 지원하기 어려울 수 있다”며 “일대일 소각·발행 기능이 적용되지 않는
+   이더리움 기반 ERC20 네트워크로 초기 지원한 것”이라고 주장했다.
    ```
 
 2. 검색을 통해 `ERC20 메인넷 차이` , `Mainnet MATIC vs ERC20 MATIC` 를 살펴보고, 무슨 차이가 있는지 정리해주세요.
@@ -49,9 +53,7 @@
 1. 아래 링크를 통해 학습한 내용을 바탕으로, Bridge가 무엇인지 본인의 언어를 활용하여 설명해주세요.
 
    ```
-   Bridge 란 코인(토큰)을 다른 체인으로 이동시키는 것.
-   
-   크로스체인 기술
+   Bridge 란 코인(토큰)을 다른 체인으로 이동시키는 것 (크로스체인 기술)
    ```
 
 [비탈릭 부테린의 크로스체인에 대한 글](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
