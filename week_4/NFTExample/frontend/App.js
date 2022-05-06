@@ -2,7 +2,7 @@ import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
-import myEpicNft from './utils/MyEpicNFT.json';
+import myEpicNft from './src/utils/MyEpicNFT.json';
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -10,7 +10,7 @@ const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 // I moved the contract address to the top for easy access.
-const CONTRACT_ADDRESS = "0xF1aD06077E05ebD0e0c0e8eBC104fE436c560D6F";
+const CONTRACT_ADDRESS = "0x6F6569AB195f4b9B1c88FB43164C420d9b88642C";
 
 const App = () => {
 
