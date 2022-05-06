@@ -14,31 +14,31 @@ const CONTRACT_ADDRESS = "0xF1aD06077E05ebD0e0c0e8eBC104fE436c560D6F";
 
 const App = () => {
 
-    const [currentAccount, setCurrentAccount] = useState("");
-    
-    const checkIfWalletIsConnected = async () => {
-      const { ethereum } = window;
+  const [currentAccount, setCurrentAccount] = useState("");
 
-      if (!ethereum) {
-          console.log("Make sure you have metamask!");
-          return;
-      } else {
-          console.log("We have the ethereum object", ethereum);
-      }
+  const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
 
-      const accounts = await ethereum.request({ method: 'eth_accounts' });
+    if (!ethereum) {
+      console.log("Make sure you have metamask!");
+      return;
+    } else {
+      console.log("We have the ethereum object", ethereum);
+    }
 
-      if (accounts.length !== 0) {
-          const account = accounts[0];
-          console.log("Found an authorized account:", account);
-					setCurrentAccount(account)
-          
-          // Setup listener! This is for the case where a user comes to our site
-          // and ALREADY had their wallet connected + authorized.
-          setupEventListener()
-      } else {
-          console.log("No authorized account found")
-      }
+    const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log("Found an authorized account:", account);
+      setCurrentAccount(account)
+
+      // Setup listener! This is for the case where a user comes to our site
+      // and ALREADY had their wallet connected + authorized.
+      setupEventListener()
+    } else {
+      console.log("No authorized account found")
+    }
   }
 
   const connectWallet = async () => {
@@ -54,19 +54,19 @@ const App = () => {
 
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
-	    
+
       let chainId = await ethereum.request({ method: 'eth_chainId' });
       console.log("Connected to chain " + chainId);
 
       // String, hex code of the chainId of the Rinkebey test network
-      const rinkebyChainId = "0x4"; 
+      const rinkebyChainId = "0x4";
       if (chainId !== rinkebyChainId) {
-	      alert("You are not connected to the Rinkeby Test Network!");
+        alert("You are not connected to the Rinkeby Test Network!");
       }
 
       // Setup listener! This is for the case where a user comes to our site
       // and connected their wallet for the first time.
-      setupEventListener() 
+      setupEventListener()
     } catch (error) {
       console.log(error)
     }
