@@ -4,7 +4,11 @@ import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import myEpicNft from './utils/MyEpicNFT.json';
 
+<<<<<<< HEAD
 const TWITTER_HANDLE = '_DSRV';
+=======
+const TWITTER_HANDLE = 'DSRV';
+>>>>>>> 47d1c0f7f10df48869db62e9fabce89228bb4685
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;

@@ -25,11 +25,12 @@
   * 브릿지란 무엇인가요? 브릿지에 나의 자산을 이동하기 위해서는 어떤 과정을 거쳐야 하나요?
   * 탈중앙화 거래소와 중앙화 거래소의 차이는 무엇인가요?
   * ERC20과 기축 코인의 차이는 무엇인가요? ERC20과 ERC721의 차이는 무엇인가요?
+* 본인의 작업 내용을 Pull Request로 올려주세요. 글 리뷰가 제공될 예정입니다.
 
 ### 과제 2: 지금까지 밀렸던 실습을 진행해주세요!
 
 * 2주차 과제: 나의 토큰을 주위 사람들에게 판매하여 하나의 쓰임새를 만들어보세요.
-  * 이 과정에서 어떤 어려움을 느꼈는지 간단하게 작성해주세요.
+  * 이 과정에서 어떤 어려움을 느꼈는지 간단하게 작성해서, Pull Request에 포함해주세요.
 * 나만의 NFT 발행해보기: 만약 지난 시간에 실습을 완료하지 못한 분이라면, 실습을 완료해주세요.
   * [GitHub 링크](https://github.com/Web3-Study-with-Sigrid-Jin/SOPT-web3-study/tree/main/week_4/NFTExample)
   * [Buildspace 링크](https://buildspace.so/p/mint-nft-collection)
@@ -46,8 +47,8 @@
 * ENS는 지난 시간에 설명했던 것처럼, Domain Name Service의 이더리움 버전입니다.
 * 이더리움 주소가 복잡하게 되어 있는 만큼, 사람이 읽기 쉬운 형태로 도메인을 만들 수 있습니다.
 * "Build your own domain service on a Polygon L2 in a weekend" 에 대해 실습해오시면 됩니다.
-
-* [Buildspace 링크](https://buildspace.so/p/CO1f8c72fd-67a3-4f99-90b8-79879c5da1eb/lessons/LE89a52498-8979-4ff0-b05a-2ae9947da32f)
+  * [Buildspace 링크](https://buildspace.so/p/CO1f8c72fd-67a3-4f99-90b8-79879c5da1eb/lessons/LE89a52498-8979-4ff0-b05a-2ae9947da32f)
+* 본인의 작업 내용을 Pull Request로 올려주세요. 코드리뷰가 제공될 예정입니다.
 
 ### 주요 질문
 
