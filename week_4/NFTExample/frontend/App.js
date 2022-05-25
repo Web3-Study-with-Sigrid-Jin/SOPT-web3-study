@@ -2,19 +2,20 @@ import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
-import myEpicNft from './src/utils/MyEpicNFT.json';
+import ATNToken from './src/utils/ATNToken.json';
 
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = '_DSRV';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 // I moved the contract address to the top for easy access.
-const CONTRACT_ADDRESS = "0x1AFAe81f493e003f31bd5951FD5816f6C648c55C";
+const CONTRACT_ADDRESS = "0xBef96aae0251E85002b336F88EaC576a0F780ACf";
 
 const App = () => {
 
   const [currentAccount, setCurrentAccount] = useState("");
+  const [toAddress, setToAddress] = useState("");
 
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -75,7 +76,6 @@ const App = () => {
 
   // Setup our listener.
   const setupEventListener = async () => {
-    // Most of this looks the same as our function askContractToMintNft
     try {
       const { ethereum } = window;
 
@@ -83,14 +83,11 @@ const App = () => {
         // Same stuff again
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, ATNToken.abi, signer);
 
-        // THIS IS THE MAGIC SAUCE.
-        // This will essentially "capture" our event when our contract throws it.
-        // If you're familiar with webhooks, it's very similar to that!
-        connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
-          console.log(from, tokenId.toNumber())
-          alert(`Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+        connectedContract.on("Transfer", (from, amount) => {
+          console.log(from, amount);
+          alert(`토큰이 전송 (transfer) 되었어요! ${from}, 에서 ${amount} 만큼 보냈어요!`)
         });
 
         console.log("Setup event listener!")
@@ -103,22 +100,22 @@ const App = () => {
     }
   }
 
-  const askContractToMintNft = async () => {
+  const askContractToTransfer = async (to, amount) => {
     try {
       const { ethereum } = window;
 
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, ATNToken.abi, signer);
 
         console.log("Going to pop wallet now to pay gas...")
-        let nftTxn = await connectedContract.makeAnEpicNFT();
+        let txn = await connectedContract.transfer(to, amount);
 
         console.log("Mining...please wait.")
-        await nftTxn.wait();
-        console.log(nftTxn);
-        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        await txn.wait();
+        console.log(txn);
+        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${txn.hash}`);
 
       } else {
         console.log("Ethereum object doesn't exist!");
@@ -139,9 +136,13 @@ const App = () => {
     </button>
   );
 
-  const renderMintUI = () => (
-    <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
-      Mint NFT
+  const inputToAddressUI = () => (
+    <input type="text" value={toAddress} placeholder='where to send' onChange={e => setToAddress(e.target.value)}></input>
+  )
+
+  const TransferUI = () => (
+    <button onClick={askContractToTransfer} className="cta-button connect-wallet-button">
+      Transfer
     </button>
   )
 
@@ -153,7 +154,7 @@ const App = () => {
           <p className="sub-text">
             Each unique. Each beautiful. Discover your NFT today.
           </p>
-          {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
+          {currentAccount === "" ? renderNotConnectedContainer() : inputToAddressUI() && TransferUI()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
