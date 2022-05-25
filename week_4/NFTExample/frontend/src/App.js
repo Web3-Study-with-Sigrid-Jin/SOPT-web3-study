@@ -2,23 +2,19 @@ import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
-import myEpicNft from './utils/MyEpicNFT.json';
+import ATNToken from './utils/ATNToken.json';
 
-<<<<<<< HEAD
 const TWITTER_HANDLE = '_DSRV';
-=======
-const TWITTER_HANDLE = 'DSRV';
->>>>>>> 47d1c0f7f10df48869db62e9fabce89228bb4685
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = '';
-const TOTAL_MINT_COUNT = 50;
 
 // I moved the contract address to the top for easy access.
-const CONTRACT_ADDRESS = "0xF1aD06077E05ebD0e0c0e8eBC104fE436c560D6F";
+const CONTRACT_ADDRESS = "0xBef96aae0251E85002b336F88EaC576a0F780ACf";
 
 const App = () => {
 
   const [currentAccount, setCurrentAccount] = useState("");
+  const [toAddress, setToAddress] = useState("");
+  const [toAmount, setToAmount] = useState("");
 
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -65,7 +61,7 @@ const App = () => {
       // String, hex code of the chainId of the Rinkebey test network
       const rinkebyChainId = "0x4";
       if (chainId !== rinkebyChainId) {
-        alert("You are not connected to the Rinkeby Test Network!");
+        alert("You are not connected to the Rinkeby Network!");
       }
 
       // Setup listener! This is for the case where a user comes to our site
@@ -78,7 +74,6 @@ const App = () => {
 
   // Setup our listener.
   const setupEventListener = async () => {
-    // Most of this looks the same as our function askContractToMintNft
     try {
       const { ethereum } = window;
 
@@ -86,14 +81,11 @@ const App = () => {
         // Same stuff again
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, ATNToken.abi, signer);
 
-        // THIS IS THE MAGIC SAUCE.
-        // This will essentially "capture" our event when our contract throws it.
-        // If you're familiar with webhooks, it's very similar to that!
-        connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
-          console.log(from, tokenId.toNumber())
-          alert(`Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+        connectedContract.on("Transfer", (from, amount) => {
+          console.log(from, amount);
+          alert(`토큰이 전송 (transfer) 되었어요! ${from}, 에서 ${amount} 만큼 보냈어요!`)
         });
 
         console.log("Setup event listener!")
@@ -106,22 +98,25 @@ const App = () => {
     }
   }
 
-  const askContractToMintNft = async () => {
+  const askContractToTransfer = async () => {
+    const to = toAddress;
+    const amount = ethers.utils.parseEther((toAmount).toString());
+    console.log("amount >>>>>>>> ", amount)
     try {
       const { ethereum } = window;
 
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
+        const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, ATNToken.abi, signer);
 
         console.log("Going to pop wallet now to pay gas...")
-        let nftTxn = await connectedContract.makeAnEpicNFT();
+        let txn = await connectedContract.transfer(to, amount);
 
         console.log("Mining...please wait.")
-        await nftTxn.wait();
-        console.log(nftTxn);
-        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+        await txn.wait();
+        console.log(txn);
+        console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${txn.hash}`);
 
       } else {
         console.log("Ethereum object doesn't exist!");
@@ -134,41 +129,53 @@ const App = () => {
 
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, [])
+  })
 
   const renderNotConnectedContainer = () => (
-      <button onClick={connectWallet} className="cta-button connect-wallet-button">
-        Connect to Wallet
-      </button>
+    <button onClick={connectWallet} className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
   );
 
-  const renderMintUI = () => (
-      <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
-        Mint NFT
-      </button>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('timee is working...')
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [toAmount])
+
+  const TransferUI = () => (
+    <div>
+          <input type="text" value={toAddress} placeholder='where to send' onChange={e => { setToAddress(e.target.value) }}></input>
+          <input type="text" value={toAmount} placeholder='how much to send' onChange={(e) => setToAmount(e.target.value)}></input>
+          <button onClick={askContractToTransfer} className="cta-button connect-wallet-button">
+            Transfer
+          </button>
+    </div>
   )
 
   return (
-      <div className="App">
-        <div className="container">
-          <div className="header-container">
-            <p className="header gradient-text">My NFT Collection</p>
-            <p className="sub-text">
-              Each unique. Each beautiful. Discover your NFT today.
-            </p>
-            {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
-          </div>
-          <div className="footer-container">
-            <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-            <a
-                className="footer-text"
-                href={TWITTER_LINK}
-                target="_blank"
-                rel="noreferrer"
-            >{`built on @${TWITTER_HANDLE}`}</a>
-          </div>
+    <div className="App">
+      <div className="container">
+        <div className="header-container">
+          <p className="header gradient-text">My ERC20 Token Transfer Web App</p>
+          <p className="sub-text">
+            Long Live Smiling Leo, Long Live DSRV!
+          </p>
+          {currentAccount === "" ? renderNotConnectedContainer() : TransferUI()}
+        </div>
+        <div className="footer-container">
+          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
+          <a
+            className="footer-text"
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >{`built on @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
+    </div>
   );
 };
 
