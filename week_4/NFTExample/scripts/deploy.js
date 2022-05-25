@@ -6,20 +6,23 @@
 const hre = require("hardhat");
 
 async function main() {
-  const nftContractFactory = await hre.ethers.getContractFactory("MyEpicNFT");
-  const nftContract = await nftContractFactory.deploy();
-  await nftContract.deployed();
-  console.log("Contract deployed to:", nftContract.address);
+  const TokenContractFactory = await hre.ethers.getContractFactory("ATNToken");
+  const TokenContract = await TokenContractFactory.deploy(
+    "AllThatNode",
+    "ATN",
+    8000
+  );
+  await TokenContract.deployed();
+  console.log("Contract deployed to:", TokenContract.address);
+  // // Call the function.
+  // let txn = await nftContract.makeAnEpicNFT();
+  // // Wait for it to be mined.
+  // await txn.wait();
 
-  // Call the function.
-  let txn = await nftContract.makeAnEpicNFT();
-  // Wait for it to be mined.
-  await txn.wait();
-
-  // Mint another NFT for fun.
-  txn = await nftContract.makeAnEpicNFT();
-  // Wait for it to be mined.
-  await txn.wait();
+  // // Mint another NFT for fun.
+  // txn = await nftContract.makeAnEpicNFT();
+  // // Wait for it to be mined.
+  // await txn.wait();
 }
 
 const runMain = async () => {

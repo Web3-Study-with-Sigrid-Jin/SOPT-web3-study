@@ -1,19 +1,18 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
-    const Greeter = await ethers.getContractFactory("Greeter");
-    const greeter = await Greeter.deploy("Hello, world!");
-    await greeter.deployed();
+let ATNToken;
+let owner;
 
-    expect(await greeter.greet()).to.equal("Hello, world!");
+describe("ATNToken", function () {
+  it("토큰이 정상적으로 발급된다.", async function () {
+    [owner] = await ethers.getSigners();
+    const TokenContractFactory = await ethers.getContractFactory("ATNToken");
+    ATNToken = await TokenContractFactory.deploy("AllThatNode", "ATN", 10000);
+    await ATNToken.deployed();
+    console.log("Contract deployed to:", ATNToken.address);
 
-    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
-
-    // wait until the transaction is mined
-    await setGreetingTx.wait();
-
-    expect(await greeter.greet()).to.equal("Hola, mundo!");
+    const ownerBalance = await ATNToken.balanceOf(owner.address);
+    expect(await ATNToken.totalSupply()).to.equal(ownerBalance);
   });
 });
