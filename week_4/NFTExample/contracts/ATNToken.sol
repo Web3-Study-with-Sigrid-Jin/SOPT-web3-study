@@ -86,6 +86,8 @@ interface IERC20 {
         uint256 amount
     ) external returns (bool);
 
+    event Mint(address indexed to, uint256 value);
+
     /**
      * @dev Emitted when `value` tokens are moved from one account (`from`) to
      * another (`to`).
@@ -499,5 +501,6 @@ contract ATNToken is ERC20 {
     constructor(string memory name, string memory symbol, uint256 totalSupply)
     ERC20(name, symbol) {
         _mint(msg.sender, totalSupply * (10 ** uint256(decimals())));
+        emit Mint(msg.sender, totalSupply);
     }
 }
